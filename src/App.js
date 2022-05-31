@@ -5,9 +5,10 @@ import News from './Components/News';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
 const App = () => {
- 
+
+
   const apiKey = "fbdce008f8a64719a71b51e8ecb17adf"
-    return (
+  return(
       <Router>
       <div>
         <Navbar/>  

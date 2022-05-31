@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import NewsItem from './NewsItem'
 import  PropTypes from 'prop-types'
+import blankimg from '../blankimg.png'
 import Spinner from './Spinner'
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -61,7 +62,7 @@ const News = (props) => {
         <div className="row" style={{marginTop:"40px"}}>
         {articles.map((element) =>{
             return  <div className="col-md-4" key={element.url} >
-              <NewsItem title={element.title?element.title.slice(0,70):""} description={element.description?element.description.slice(0,150):""} imgUrl={!element.urlToImage?"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Blank_square.svg/600px-Blank_square.svg.png?20080903192019":element.urlToImage} newsurl={element.url} author={element.author} date={element.publishedAt} />
+              <NewsItem title={element.title?element.title.slice(0,70):""} description={element.description?element.description.slice(0,150):""} imgUrl={!element.urlToImage?blankimg:element.urlToImage} newsurl={element.url} author={element.author} date={parseInt(element.publishedAt)} />
           </div>
         }) }
         </div>
