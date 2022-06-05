@@ -8,6 +8,9 @@ const App = () => {
 
 
   const apiKey = "fbdce008f8a64719a71b51e8ecb17adf"
+  // const apiKey = process.env.REACT_APP_NEWS_API
+  console.log(apiKey)
+
   return(
       <Router>
       <div>

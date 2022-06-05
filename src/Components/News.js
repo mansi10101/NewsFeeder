@@ -6,6 +6,7 @@ import Spinner from './Spinner'
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const News = (props) => {
+  console.log("props",props.apiKey)
 
   const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(true)
@@ -23,6 +24,7 @@ const News = (props) => {
      setTotalResults(parsedData.totalResults)
      setLoading(false);
   }
+
 
   useEffect(() => {
     updateNews()
