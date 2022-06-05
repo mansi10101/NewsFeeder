@@ -53,7 +53,7 @@ const News = (props) => {
           <h2 style={{textAlign:"center",color:"red", marginTop:"100px"}}> NewsFeeder - Top {props.category} Headlines</h2>
           {loading && <Spinner />}
           <InfiniteScroll
-          dataLength={articles.length}
+          dataLength={articles.length ? articles.length : 0}
           next={fetchMoreData}
           hasMore={articles.length !== totalResults}
           loader={<Spinner/>} 
