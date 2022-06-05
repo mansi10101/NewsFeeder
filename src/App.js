@@ -17,7 +17,7 @@ const App = () => {
         <Navbar/>  
         <Routes>
 
-            <Route exact path="/"  element = {<News key="General" pagesize={12} country={"in"} apiKey={apiKey} category={"General"} />}/>
+            <Route exact path="/NewsFeeder"  element = {<News key="General" pagesize={12} country={"in"} apiKey={apiKey} category={"General"} />}/>
             <Route exact path="/Business"  element = {<News key="Business" pagesize={12} apiKey={apiKey} country={"in"} category={"Business"} />}/>
             <Route exact path="/Entertainment"  element = {<News key="Entertainment" pagesize={12} apiKey={apiKey} country={"in"} category={"Entertainment"} />}/>
             <Route exact path="/General"  element = {<News key="General" pagesize={12} apiKey={apiKey} country={"in"} category={"General"} />}/>
